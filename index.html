@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Razas de perro</title>
+  <link rel="stylesheet" href="styles/style.css" />
+</head>
+<body>
+
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <h1 class="title">Razas de perro</h1>
+      <div class="tools">
+        <input id="search" class="input" type="text" placeholder="Buscar raza..." autocomplete="off" />
+        <select id="size" class="select">
+          <option value="all">Tamaño: Todos</option>
+          <option value="pequeño">Pequeño</option>
+          <option value="mediano">Mediano</option>
+          <option value="grande">Grande</option>
+        </select>
+        <select id="energy" class="select">
+          <option value="all">Energía: Todos</option>
+          <option value="baja">Baja</option>
+          <option value="media">Media</option>
+          <option value="alta">Alta</option>
+        </select>
+        <button id="clear" class="btn">Limpiar</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="meta">
+      <span class="chip" id="resultsChip">Mostrando 14</span>
+
+    </div>
+
+    <section id="grid" class="breed-grid" aria-live="polite"></section>
+    <p id="empty" class="empty" style="display:none;">No se encontraron resultados.</p>
+  </main>
+
+  <!-- Modal -->
+  <div class="modal" id="modal" aria-hidden="true">
+    <div class="modal-backdrop" id="modalBackdrop"></div>
+    <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="iconbtn close" id="modalClose" aria-label="Cerrar">✕</button>
+      <div class="modal-body" id="modalBody"></div>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
+
+
